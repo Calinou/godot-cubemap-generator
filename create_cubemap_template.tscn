@@ -1,0 +1,162 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjef2psgf0usr"]
+
+[ext_resource type="Script" path="res://save_image.gd" id="1_5p0ng"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv7df"]
+bg_color = Color(0.960784, 0.2, 0.321569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f71kl"]
+bg_color = Color(0.48, 0.1008, 0.164, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_id47q"]
+bg_color = Color(0.529412, 0.839216, 0.00784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4n2d"]
+bg_color = Color(0.26754, 0.42, 0.0042, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejhx8"]
+bg_color = Color(0.160784, 0.54902, 0.960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fntvs"]
+bg_color = Color(0.0816, 0.27416, 0.48, 1)
+
+[node name="CreateCubemapTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p0ng")
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 26.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="X+" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kv7df")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/X+"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "X+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="X-" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f71kl")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/X-"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "X-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Y+" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_id47q")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/Y+"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "Y+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Y-" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4n2d")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/Y-"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "Y-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Z+" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ejhx8")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/Z+"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "Z+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Z-" type="Panel" parent="FlowContainer"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fntvs")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="FlowContainer/Z-"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/outline_size = 64
+theme_override_font_sizes/font_size = 256
+text = "Z-"
+horizontal_alignment = 1
+vertical_alignment = 1

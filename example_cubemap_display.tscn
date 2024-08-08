@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfvsrg8ds56b4"]
+
+[ext_resource type="CompressedCubemap" uid="uid://cj44qyd72qjes" path="res://cubemap_swapped_x.png" id="1_1484j"]
+
+[sub_resource type="Shader" id="Shader_81yld"]
+code = "shader_type sky;
+
+uniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;
+uniform float exposure : hint_range(0, 128) = 1.0;
+
+void sky() {
+	vec3 eyedir = vec3(EYEDIR.x, EYEDIR.y, EYEDIR.z);
+	COLOR = texture(source_panorama, eyedir).rgb * exposure;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fr5ex"]
+shader = SubResource("Shader_81yld")
+shader_parameter/exposure = 1.0
+shader_parameter/source_panorama = ExtResource("1_1484j")
+
+[sub_resource type="Sky" id="Sky_n6scg"]
+sky_material = SubResource("ShaderMaterial_fr5ex")
+
+[sub_resource type="Environment" id="Environment_haaqd"]
+background_mode = 2
+sky = SubResource("Sky_n6scg")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_jiw1j"]
+radius = 4.0
+height = 8.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjfwy"]
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+metallic = 1.0
+roughness = 0.0
+
+[node name="ExampleCubemapDisplay" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_haaqd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_jiw1j")
+surface_material_override/0 = SubResource("StandardMaterial3D_vjfwy")

@@ -1,0 +1,25 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://cj44qyd72qjes"
+path="res://.godot/imported/cubemap_swapped_x.png-4af9386bbef53656a703a76c3f5753bd.ccube"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://cubemap_swapped_x.png"
+dest_files=["res://.godot/imported/cubemap_swapped_x.png-4af9386bbef53656a703a76c3f5753bd.ccube"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/arrangement=1
