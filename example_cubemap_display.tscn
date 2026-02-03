@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfvsrg8ds56b4"]
+[gd_scene format=3 uid="uid://dfvsrg8ds56b4"]
 
 [ext_resource type="CompressedCubemap" uid="uid://cj44qyd72qjes" path="res://cubemap_swapped_x.png" id="1_1484j"]
 
@@ -16,8 +16,8 @@ void sky() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fr5ex"]
 shader = SubResource("Shader_81yld")
-shader_parameter/exposure = 1.0
 shader_parameter/source_panorama = ExtResource("1_1484j")
+shader_parameter/exposure = 1.0
 
 [sub_resource type="Sky" id="Sky_n6scg"]
 sky_material = SubResource("ShaderMaterial_fr5ex")
@@ -37,14 +37,14 @@ albedo_color = Color(0.5, 0.5, 0.5, 1)
 metallic = 1.0
 roughness = 0.0
 
-[node name="ExampleCubemapDisplay" type="Node3D"]
+[node name="ExampleCubemapDisplay" type="Node3D" unique_id=1503283890]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=902484476]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1320744033]
 environment = SubResource("Environment_haaqd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1827517715]
 mesh = SubResource("SphereMesh_jiw1j")
 surface_material_override/0 = SubResource("StandardMaterial3D_vjfwy")

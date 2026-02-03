@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Test Cubemap Generator"
 run/main_scene="res://create_cubemap_template.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.6")
 
 [display]
 

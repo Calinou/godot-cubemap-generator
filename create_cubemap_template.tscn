@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjef2psgf0usr"]
+[gd_scene format=3 uid="uid://cjef2psgf0usr"]
 
-[ext_resource type="Script" path="res://save_image.gd" id="1_5p0ng"]
+[ext_resource type="Script" uid="uid://covy4k5gol8u6" path="res://save_image.gd" id="1_5p0ng"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv7df"]
 bg_color = Color(0.960784, 0.2, 0.321569, 1)
@@ -20,7 +20,7 @@ bg_color = Color(0.160784, 0.54902, 0.960784, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fntvs"]
 bg_color = Color(0.0816, 0.27416, 0.48, 1)
 
-[node name="CreateCubemapTemplate" type="Control"]
+[node name="CreateCubemapTemplate" type="Control" unique_id=523681405]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5p0ng")
 
-[node name="FlowContainer" type="FlowContainer" parent="."]
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=724844425]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,13 +41,13 @@ grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 
-[node name="X+" type="Panel" parent="FlowContainer"]
+[node name="X+" type="Panel" parent="FlowContainer" unique_id=2015234782]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kv7df")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/X+"]
+[node name="Label" type="Label" parent="FlowContainer/X+" unique_id=789532249]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,13 +61,13 @@ text = "X+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="X-" type="Panel" parent="FlowContainer"]
+[node name="X-" type="Panel" parent="FlowContainer" unique_id=781105344]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_f71kl")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/X-"]
+[node name="Label" type="Label" parent="FlowContainer/X-" unique_id=1761331474]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,13 +81,13 @@ text = "X-"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Y+" type="Panel" parent="FlowContainer"]
+[node name="Y+" type="Panel" parent="FlowContainer" unique_id=354917358]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_id47q")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/Y+"]
+[node name="Label" type="Label" parent="FlowContainer/Y+" unique_id=1688792482]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,13 +101,13 @@ text = "Y+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Y-" type="Panel" parent="FlowContainer"]
+[node name="Y-" type="Panel" parent="FlowContainer" unique_id=386472098]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_d4n2d")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/Y-"]
+[node name="Label" type="Label" parent="FlowContainer/Y-" unique_id=91279982]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -121,13 +121,13 @@ text = "Y-"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Z+" type="Panel" parent="FlowContainer"]
+[node name="Z+" type="Panel" parent="FlowContainer" unique_id=332017056]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ejhx8")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/Z+"]
+[node name="Label" type="Label" parent="FlowContainer/Z+" unique_id=1164472475]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,13 +141,13 @@ text = "Z+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Z-" type="Panel" parent="FlowContainer"]
+[node name="Z-" type="Panel" parent="FlowContainer" unique_id=728418726]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fntvs")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="FlowContainer/Z-"]
+[node name="Label" type="Label" parent="FlowContainer/Z-" unique_id=1591497595]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
