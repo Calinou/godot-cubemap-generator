@@ -1,21 +1,10 @@
 [gd_scene format=3 uid="uid://dfvsrg8ds56b4"]
 
 [ext_resource type="CompressedCubemap" uid="uid://cj44qyd72qjes" path="res://cubemap_swapped_x.png" id="1_1484j"]
-
-[sub_resource type="Shader" id="Shader_81yld"]
-code = "shader_type sky;
-
-uniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;
-uniform float exposure : hint_range(0, 128) = 1.0;
-
-void sky() {
-	vec3 eyedir = vec3(EYEDIR.x, EYEDIR.y, EYEDIR.z);
-	COLOR = texture(source_panorama, eyedir).rgb * exposure;
-}
-"
+[ext_resource type="Shader" uid="uid://bqwd3hi1sndsv" path="res://sky_cubemap.gdshader" id="1_vod3e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fr5ex"]
-shader = SubResource("Shader_81yld")
+shader = ExtResource("1_vod3e")
 shader_parameter/source_panorama = ExtResource("1_1484j")
 shader_parameter/exposure = 1.0
 

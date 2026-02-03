@@ -6,6 +6,9 @@ const SAVE_IMAGE = true
 func _ready() -> void:
 	if not SAVE_IMAGE:
 		return
+	elif Engine.is_embedded_in_editor():
+		push_error("Image saving is not supported when game embedding is enabled. To save images, disable game embedding in the Game tab then run the project again.")
+		return
 
 	get_viewport().size = Vector2i(1024, 1536)
 	get_viewport().get_window().content_scale_size = get_viewport().size
